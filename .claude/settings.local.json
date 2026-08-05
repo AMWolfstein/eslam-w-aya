@@ -8,7 +8,10 @@
       "Bash(python3 -m http.server 8934)",
       "Bash(curl -s localhost:8934/index.html)",
       "Bash(kill %1)",
-      "WebSearch"
+      "WebSearch",
+      "Bash(curl -s -o /dev/null -w \"status: %{http_code}\\\\ncontent-type: %{content_type}\\\\nsize: %{size_download}\\\\n\" https://eslam-w-aya.vercel.app/assets/Eslam-Aya.png)",
+      "Bash(git add *)",
+      "Bash(git restore *)"
     ]
   }
 }

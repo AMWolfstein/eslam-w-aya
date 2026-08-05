@@ -3,7 +3,7 @@
   const WEDDING_DATE = new Date(WEDDING_ISO);
   const VENUE_NAME = 'دار المركبات قاعة لادونا';
   const VENUE_URL = 'https://maps.app.goo.gl/mhajKhsz1Y8phzv29?g_st=iw';
-  const SHARE_TEXT = 'يسعدنا دعوتكم لحضور حفل زفاف أسلام و أيه — الاربعاء ٢٦ أغسطس ٢٠٢٦ في دار المركبات قاعة لادونا. التفاصيل: ';
+  const SHARE_TEXT = 'يسعدنا دعوتكم لحضور حفل زفاف إسلام و آية — الاربعاء ٢٦ أغسطس ٢٠٢٦ في دار المركبات قاعة لادونا. التفاصيل: ';
 
   /* ===================== COUNTDOWN ===================== */
   const els = {
@@ -103,7 +103,7 @@
 
   document.getElementById('share-native').addEventListener('click', async () => {
     const shareData = {
-      title: 'أسلام و أيه — ٢٦ أغسطس ٢٠٢٦',
+      title: 'إسلام و آية — ٢٦ أغسطس ٢٠٢٦',
       text: SHARE_TEXT,
       url: pageUrl(),
     };
@@ -145,7 +145,7 @@
     const end = new Date(start.getTime() + 4 * 60 * 60 * 1000);
     const ics = buildIcs({
       uid: `eslam-aya-${start.getTime()}@invite`,
-      title: "حفل زفاف أسلام و أيه",
+      title: "حفل زفاف إسلام و آية",
       description: SHARE_TEXT + pageUrl(),
       location: VENUE_NAME,
       url: VENUE_URL,
