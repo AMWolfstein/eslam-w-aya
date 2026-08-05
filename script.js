@@ -1,9 +1,9 @@
 (() => {
-  const WEDDING_ISO = '2026-06-12T19:00:00+03:00';
+  const WEDDING_ISO = '2026-08-26T20:00:00+03:00';
   const WEDDING_DATE = new Date(WEDDING_ISO);
-  const VENUE_NAME = 'Jewel Panorama Garden';
-  const VENUE_URL = 'https://maps.app.goo.gl/UkxZMn3ygWTu4Phg6';
-  const SHARE_TEXT = 'يسعدنا دعوتكم لحضور حفل زفاف هشام و ندى — الجمعة ١٢ يونيو ٢٠٢٦ في Jewel Panorama Garden. التفاصيل: ';
+  const VENUE_NAME = 'دار المركبات قاعة لادونا';
+  const VENUE_URL = 'https://maps.app.goo.gl/mhajKhsz1Y8phzv29?g_st=iw';
+  const SHARE_TEXT = 'يسعدنا دعوتكم لحضور حفل زفاف أسلام و أيه — الاربعاء ٢٦ أغسطس ٢٠٢٦ في دار المركبات قاعة لادونا. التفاصيل: ';
 
   /* ===================== COUNTDOWN ===================== */
   const els = {
@@ -103,7 +103,7 @@
 
   document.getElementById('share-native').addEventListener('click', async () => {
     const shareData = {
-      title: 'هشام و ندى — ١٢ يونيو ٢٠٢٦',
+      title: 'أسلام و أيه — ٢٦ أغسطس ٢٠٢٦',
       text: SHARE_TEXT,
       url: pageUrl(),
     };
@@ -144,8 +144,8 @@
     const start = new Date(WEDDING_ISO);
     const end = new Date(start.getTime() + 4 * 60 * 60 * 1000);
     const ics = buildIcs({
-      uid: `hesham-nada-${start.getTime()}@invite`,
-      title: "حفل زفاف هشام و ندى",
+      uid: `eslam-aya-${start.getTime()}@invite`,
+      title: "حفل زفاف أسلام و أيه",
       description: SHARE_TEXT + pageUrl(),
       location: VENUE_NAME,
       url: VENUE_URL,
@@ -154,7 +154,7 @@
     const blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' });
     const a = document.createElement('a');
     a.href = URL.createObjectURL(blob);
-    a.download = 'hesham-nada.ics';
+    a.download = 'eslam-aya.ics';
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
@@ -167,7 +167,7 @@
     return [
       'BEGIN:VCALENDAR',
       'VERSION:2.0',
-      'PRODID:-//Hesham & Nada//Wedding Invite//EN',
+      'PRODID:-//Eslam & Aya//Wedding Invite//EN',
       'CALSCALE:GREGORIAN',
       'METHOD:PUBLISH',
       'BEGIN:VEVENT',

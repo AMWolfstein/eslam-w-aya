@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd /home/amwolfstein/Documents/GitHub/eslam-w-aya && grep -n -i -E \"هشام|ندى|Hesham|Nada|Jewel|Panorama|يونيو|السابعة|1240|1748\" index.html)",
+      "Read(//home/amwolfstein/Documents/GitHub/eslam-w-aya/**)",
+      "Bash(python3 -c ' *)",
+      "Bash(identify assets/Eslam-Aya.png)",
+      "Bash(python3 -m http.server 8934)",
+      "Bash(curl -s localhost:8934/index.html)",
+      "Bash(kill %1)",
+      "WebSearch"
+    ]
+  }
+}
